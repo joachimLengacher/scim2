@@ -30,7 +30,7 @@ public class Group
   @Attribute(description = "The identifier of the User's group.",
       isRequired = false,
       isCaseExact = false,
-      mutability = AttributeDefinition.Mutability.READ_ONLY,
+      mutability = AttributeDefinition.Mutability.IMMUTABLE,
       returned = AttributeDefinition.Returned.DEFAULT,
       uniqueness = AttributeDefinition.Uniqueness.NONE)
   private String value;
@@ -39,7 +39,7 @@ public class Group
       "resource to which the user belongs",
       isRequired = false,
       referenceTypes = { "User", "Group" },
-      mutability = AttributeDefinition.Mutability.READ_ONLY,
+      mutability = AttributeDefinition.Mutability.IMMUTABLE,
       returned = AttributeDefinition.Returned.DEFAULT,
       uniqueness = AttributeDefinition.Uniqueness.NONE)
   @JsonProperty("$ref")
@@ -49,7 +49,7 @@ public class Group
       "display purposes.",
       isRequired = false,
       isCaseExact = false,
-      mutability = AttributeDefinition.Mutability.READ_ONLY,
+      mutability = AttributeDefinition.Mutability.IMMUTABLE,
       returned = AttributeDefinition.Returned.DEFAULT,
       uniqueness = AttributeDefinition.Uniqueness.NONE)
   private String display;
@@ -59,7 +59,7 @@ public class Group
       isRequired = false,
       isCaseExact = false,
       canonicalValues = { "direct", "indirect" },
-      mutability = AttributeDefinition.Mutability.READ_ONLY,
+      mutability = AttributeDefinition.Mutability.IMMUTABLE,
       returned = AttributeDefinition.Returned.DEFAULT,
       uniqueness = AttributeDefinition.Uniqueness.NONE)
   private String type;
